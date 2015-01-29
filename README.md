@@ -25,13 +25,13 @@ gem install omniauth-affinitylive
 
 ## Usage
 
-Create an AffinityLive application as an administrator user.
+Create an AffinityLive application as an administrator user. YOUR_DEPLOYMENT = the subdomain you use to login with on AffinityLive.
 
 For a Rack application:
 
 ```ruby
 use OmniAuth::Builder do
-  provider :affinitylive, CLIENT_ID, SECRET, :authorize_params => {:scope =>"read(all)", :response_type => "code"}, :client_options => {:site => "https://YOUR_DEPLOYMENT.api.affinitylive.com"}
+  provider :affinitylive, CLIENT_ID, CLIENT_SECRET, :client_options => {:site => "https://YOUR_DEPLOYMENT.api.affinitylive.com"}
 end
 ```
 
@@ -40,7 +40,7 @@ For a Rails application:
 ```ruby
 # config/intializers/omniauth.rb
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :affinitylive, CLIENT_ID, SECRET, :authorize_params => {:scope =>"read(all)", :response_type => "code"}, :client_options => {:site => "https://YOUR_DEPLOYMENT.api.affinitylive.com"}
+  provider :affinitylive, CLIENT_ID, CLIENT_SECRET, :client_options => {:site => "https://YOUR_DEPLOYMENT.api.affinitylive.com"}
 end
 ```
 
@@ -49,7 +49,7 @@ Or, if you use [devise](https://github.com/plataformatec/devise) for authenticat
 ```ruby
 # config/initializers/devise.rb
 Devise.setup do |config|
-  config.omniauth :affinitylive, CLIENT_ID, SECRET, :authorize_params => {:scope =>"read(all)", :response_type => "code"}, :client_options => {:site => "https://YOUR_DEPLOYMENT.api.affinitylive.com"}
+  config.omniauth :affinitylive, CLIENT_ID, CLIENT_SECRET, :client_options => {:site => "https://YOUR_DEPLOYMENT.api.affinitylive.com"}
 end
 ```
 

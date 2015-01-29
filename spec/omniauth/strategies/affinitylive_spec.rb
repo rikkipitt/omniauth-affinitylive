@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "OmniAuth::Strategies::AffinityLive" do
   subject do
-    OmniAuth::Strategies::AffinityLive.new(nil, {})
+    OmniAuth::Strategies::Affinitylive.new(nil, {})
   end
 
   context 'client options' do
