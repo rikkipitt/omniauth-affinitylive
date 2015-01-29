@@ -6,7 +6,6 @@ require "multi_xml"
 module OmniAuth
   module Strategies
     class Affinitylive < OmniAuth::Strategies::OAuth2
-      option :name, "affinitylive"
 
       option :client_options, {
         :authorize_url => "/oauth2/v0/authorize",

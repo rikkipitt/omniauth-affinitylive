@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "OmniAuth::Strategies::AffinityLive" do
+describe "OmniAuth::Strategies::Affinitylive" do
   subject do
     OmniAuth::Strategies::Affinitylive.new(nil, {})
   end
